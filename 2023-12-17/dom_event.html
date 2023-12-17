@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+	h3{
+		background-color: red; 
+	}	
+</style>
+
+<script type="text/javascript">
+	// 화면이 로드가 끝나면 호출되는 함수 window.onload 이고 이 함수가 호출되면
+	// 실행할 콜백함수를 익명함수를 이용해서 등록
+	window.onload = function(){  
+		document.querySelector('h1').style.backgroundColor = 'red';  // 자바스크립트 형태		
+		document.querySelector('h2').style.color = 'red';		
+	};
+</script>
+
+<body>
+	<h1>Process - 1</h1>
+	<h2>Process - 2</h2>
+	<h3>Process - 3</h3>
+</body>
+</html>

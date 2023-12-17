@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script>
+	/*
+	window.onload = function(){
+			let headers = document.querySelectorAll('h1');
+			for(let i = 0; headers.length; i++){
+				let header = headers[i];
+				header.style.color = 'blue';
+				header.style.background = 'black'
+			}
+	}
+	*/
+</script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>	
+	// 동일한 기능
+	
+	$(document).ready(function(){
+		$('h1').css('color','red');
+		$('h1').css('background','black');
+	});
+
+</script>
+<body>
+	<h1>Header</h1>
+	<h1>Header</h1>
+	<h1>Header</h1>
+</body>
+</html>

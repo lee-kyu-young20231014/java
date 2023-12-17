@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+	window.onload = function(){
+		let daum_button = document.getElementById('daum');
+		//  1. 기본이벤트 제거
+		daum_button.onclick = function(){
+			return false;
+		}		
+		
+		// 2 기본 이벤트 제거
+		daum_button.onclick = function(event){			
+			event.preventDefault();
+		}
+	}
+</script>
+<body>
+	<a id='daum' href="http://www.daum.net">daum</a>
+	<a id='naver' href="http://www.naver.com">naver</a>
+</body>
+</html>

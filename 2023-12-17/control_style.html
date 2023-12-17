@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+	window.onload = function(){
+		let output = '';
+		for(let i = 0; i < 256; i++){
+			output += '<div style = "height:2px; background-color:rgb('+i+','+i+','+i+')"></div>';
+		}
+		document.body.innerHTML = output;		
+	}
+</script>
+<body>
+
+</body>
+</html>

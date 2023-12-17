@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<!-- 이페이는 에러를 포함하고 있음...
+자바스트팁트에서 dom 객체를 사용하는데
+dom은 나중에 로딩됨
+즉 순서의 문제 -->
+<script type="text/javascript">
+	document.querySelector('h1').style.backgroundColor = 'red';
+	document.querySelector('h2').style.color = 'red';
+</script>
+
+<body>
+	<h1>Process - 1</h1>
+	<h2>Process - 2</h2>
+</body>
+</html>
