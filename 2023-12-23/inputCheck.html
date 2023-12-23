@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+<script>
+	// dom에 있는 객체를 가져오려면 이 코드는 화면이 랜더링(로딩)이후에 적용되어야 함
+	$(document).ready(function(){
+		// 제출버튼을 눌렀을때 발생되는 이벤트를 연결 및 정의
+		$('form').submit(function(event){  // event는 발생한 객체의 기본이벤트를 막기위해 이벤트객체 자체
+			// input 태그의 값을 추출
+			let value = $('input').val();
+			// 유효성을 검사 한글만 허용
+			if(value.replace(/[가-힣]/g, "").length == 0){
+				// 유효성 검사 통과
+				alert('과정을 진행합니다.')
+			}
+			else{
+				// 유효성 검사 실패
+				alert('한글 이름을 입력해 주세요');
+				event.preventDefault();
+			}
+			
+		});
+	});
+</script>
+</head>
+<body>
+	<form>
+		<label>이름</label>
+		<input type="text">
+		<input type="submit">
+	</form>
+</body>
+</html>

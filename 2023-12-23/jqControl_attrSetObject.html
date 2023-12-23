@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Basic</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+        // 이벤트를 연결합니다.
+        $(document).ready(function () {
+            // 속성을 지정합니다. 객체 입력방식
+            $('img').attr({
+				alt : 'jQuery 라이브러리를 사용한 속성 지정',
+				src : 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+				width : 100 
+			});
+            
+            
+            //$('img').attr('alt', 'jQuery 라이브러리를 사용한 속성 지정');
+            //$('img').attr('src', 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png');
+            //$('img').attr('width', '100');
+        });
+    </script>
+</head>
+<body>
+    <img>
+    <img>
+    <img>
+</body>
+</html>

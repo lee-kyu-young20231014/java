@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+
+<script>
+	$(document).ready(function(){
+		// 시작과 중지상태를 나타내는 변수
+		let isRunning = true;
+		let count = 0;
+		let intervel_id;
+		function toggleInterval(){
+			if(isRunning){
+				intervel_id =  setInterval(function(){			
+				$('div').text(count++);
+				},500);
+			}else{
+				clearInterval(intervel_id);
+			}
+		}
+		
+		// 최초 시작을 위해 함수 호출
+		toggleInterval();
+		
+		$('button').click(function(){
+			// 시작과 중지를 토글
+			isRunning = !isRunning;
+			// 토글된상태에따라서 interval  설정 또는 해제
+			toggleInterval();
+			$(this).text(isRunning? '중지':'시작');
+		});
+					
+	});
+		
+		
+</script>
+
+</head>
+<body>
+	<div>0</div>
+	<button>중지</button>
+</body>
+</html>
