@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let array = ['사과','바나나','망고','딸기']
+	console.log(array);
+	
+	let product = {
+		제품명 : '망고',
+		유형 : '당절임'
+	}
+	console.log(product);
+	let object = {
+		name : '바나나',
+		price : 1200,
+		print : function(){
+			console.log(`${this.name}의 가격은 ${this.price}입니다.`);
+		}
+	}
+	console.log(object);
+	for(let i in object){
+		console.log(`key : ${i} value : ${object[i]}`);
+	}
+	
+	let object2 = {
+		number : 273,
+		string : 'RintIanTta',
+		boolean : true,
+		array : [52,273,103,32],
+		method : function(){
+			
+		}
+	}
+	console.log(object2);
+	object.print();
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

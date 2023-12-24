@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+	$('document').ready(function(){
+		for(let i =0; i < 10; i++){
+			/*
+			$(`<h1>Create Document Object By Jquery ${i} </h1> `)
+			.css({
+				backgroundColor:'black',
+				color:'red'
+			})
+			.appendTo('body');
+			*/		
+			let $dynamic = $(`<h1>Create Document Object By Jquery ${i} </h1> `)
+				.css({
+					backgroundColor:'black',
+					color:'red'
+				});
+			// 문서 객체를 추가합니다.
+			$('body').append($dynamic); 	
+		}
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

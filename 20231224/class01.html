@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+	// 클래스 정의
+	class Product{
+		constructor(name,price){
+			this.name = name
+			this.price = price
+		}
+	} 
+	// 클래스 생성
+	let product = new Product("바나나",1200);
+	console.log(product.name);
+	console.log(product.price);
+	
+	// body에 추가
+	$('document').ready(function(){
+		$(`<h1>제품명 : ${product.name}  / 가격은 : ${product.price}</h1>`).appendTo('body');
+		$('body').append (`<h1>제품명 : ${product.name}  / 가격은 : ${product.price}</h1>`);
+	});
+		
+</script>
+
+</head>
+<body>
+	
+</body>
+</html>

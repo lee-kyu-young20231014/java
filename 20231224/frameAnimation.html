@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>	
+	$('document').ready(function(){
+		let count = 0;
+		let image = $('#image');
+		let frames = [];
+		let interval_id;
+		let isRun = true; 
+		for(let i=0; i<15; i++){
+			frames.push(`${i}.png`)
+		}
+		//console.log(frames);
+		// 이벤트 연결
+		$('button').click(function(){
+			isRun = !isRun;
+			if(isRun){
+				clearInterval(interval_id); // 타이머 멈추기
+				$("button").text('달리기');
+			}
+			else{
+				run();
+				$("button").text('멈추기');
+			}
+		});
+		// 타이머 반복	
+		function run(){
+			interval_id = setInterval(function(){
+				image.attr('src', frames[count % frames.length] );   // 임의의수 % 15 
+				count++;
+			}, 70);	
+		}
+		
+	});
+</script>
+</head>
+ 
+<body>
+	<button>달리기</button>
+	<img id = 'image' src='0.png'>
+</body>
+</html>

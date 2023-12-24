@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+	$(document).ready(function(){
+		let appendDocument = function(){
+			for(let i=0; i<20; i++){
+				$('<h1>Infinity Scroll</h1>').appendTo('body')
+			}	
+		};		
+		appendDocument();	
+		// 이벤트 연결
+		$(window).scroll(function(){
+			// 변수를 선언			
+			let scrollHeight = $(window).scrollTop() + $(window).height();			
+			let documentHeight = $(document).height();
+			
+			console.log('windowe scrollTop '+ $(window).scrollTop());
+			console.log('window height ' +$(window).height());
+			console.log('document height ' +$(document).height());
+			// 검사
+			
+			if(Math.abs(documentHeight - scrollHeight) <= 2 )
+				appendDocument();
+		});	
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

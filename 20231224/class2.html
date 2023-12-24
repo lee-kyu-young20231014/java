@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<style>
+	table {
+  		width: 100%;
+	}
+
+	th, td {
+  		text-align: center;
+  		border:1px solid black;
+	}	
+</style>
+
+<script>
+	// 클래스 정의
+	class Product{
+		constructor(name,price){
+			this.name = name
+			this.price = price
+		}
+		 
+		print(){
+			console.log(`${this.name}의 가격은 ${this.price}원 입니다.`);
+		} 
+		
+	} 
+	// 클래스 생성	
+	let products = [
+		new Product("바나나",1200),
+		new Product("사과",2000),
+		new Product("배",3000),
+		new Product("고구마",700),
+		new Product("감자",600),
+		new Product("수박",500)
+	]; 
+	for(let product of products){
+		product.print();
+	}
+	
+	
+	// body에 추가
+	$('document').ready(function(){
+		// 출력할 내용을 만들어서 body 에 추가  append
+		for(let product of products){
+			$(`<tr><td>${product.name}</td><td>${product.price}</td> </tr>`).appendTo('tbody')
+		}
+		
+	});		
+</script>
+
+</head>
+<body>
+	<table>
+		<th>제품명</th>	
+		<th>가격</th>
+		<tbody></tbody>
+	</table>
+</body>
+</html>
