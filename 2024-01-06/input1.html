@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<p>ID : <input type="text" name="id" value="test@test.com"></p>
+		<p>psw : <input type="password" name='psw' value="111"></p>
+		<p>email : <input type="email" name='email' placeholder="이메일을 입력하세요"></p>
+		<p>age : <input type="number" name="age" value="10" min="1" max="120" step="2"> </p>
+		<p>number : <input type="range" name="num" value="10" min="1" max="120" step="2"></p>
+		<p> 
+			<input type="radio" name='fruit' value="apple" checked> 사과 
+			<input type="radio" name='fruit' value="banana"> 바나나
+			<input type="radio" name='fruit' value="orange"> 오렌지
+			&ensp;
+			<input type="checkbox" name='fruit2_1' value="apple" checked> 사과 
+			<input type="checkbox" name='fruit2_2' value="banana"> 바나나
+			<input type="checkbox" name='fruit2_3' value="orange"> 오렌지
+		</p>
+		<p>date : <input type="date" name="'birth" value="2024-01-01">  </p>
+		<p>backGround : <input type="color" name="bg" value="#ff0000"> </p>
+		<input type="hidden" name="setting" value="true">
+		comment<br>
+		<textarea name="comment" rows="10" cols="50" placeholder="Add your comment"  ></textarea>
+		<p>
+			<select name='city'>
+				<option value="apple">사과</option>
+				<option value="banana" selected>바나나</option>
+				<option value="orange">오렌지</option>				
+			</select>
+			
+			<select name='city2' multiple>
+				<option value="apple">사과</option>
+				<option value="banana" selected>바나나</option>
+				<option value="orange">오렌지</option>				
+				<option value="orange">오렌지2</option>
+				<option value="orange">오렌지3</option>
+			</select>
+		</p>
+		<p>
+			<input type="submit" value="등록">
+			<input type="reset" value="초기화">
+		</p>		
+	</form> 
+	
+	검색 : <input type="search" id='searchinput'>
+	<button >검색</button>
+</body>
+</html>
+
+
+
+
+
+
